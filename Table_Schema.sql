@@ -9,8 +9,10 @@ CREATE TABLE departments (
   dept_name VARCHAR(30) NOT NULL,
   PRIMARY KEY (dept_no)
 );
+-- import departments csv
 
-select * from departments
+SELECT * 
+FROM departments
 
 
 -- Create table employees
@@ -26,8 +28,10 @@ CREATE TABLE employees (
 	hire_date DATE NOT NULL,
 	PRIMARY KEY (emp_no)
 );
+-- import employees csv
 
-select * from employees
+SELECT * 
+FROM employees
 
 
 --Create table dept_emp
@@ -42,8 +46,10 @@ CREATE TABLE dept_emp (
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
     FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
 );
+-- import dept_emp csv
 
-select * from dept_emp
+SELECT * 
+FROM dept_emp
 
 
 -- Create table dept_managers
@@ -58,8 +64,10 @@ CREATE TABLE dept_managers (
  FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
  FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
+-- import dept_manager csv
 
-select * from dept_managers
+SELECT * 
+FROM dept_managers
 
 
 
@@ -74,8 +82,10 @@ CREATE TABLE salaries (
 	to_date DATE NOT NULL,
 	FOREIGN KEY(emp_no) REFERENCES employees(emp_no)
 );
+-- import salaries csv
 
-select * from salaries
+SELECT * 
+FROM salaries
 
 
 --Creating titles table
@@ -89,6 +99,7 @@ CREATE TABLE titles (
 	to_date DATE NOT NULL,
 	FOREIGN KEY(emp_no) REFERENCES employees(emp_no)
 );
-
-select * from titles
+-- import titles csv
+SELECT * 
+FROM titles
 
